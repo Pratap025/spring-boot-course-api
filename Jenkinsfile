@@ -20,19 +20,19 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
 
         stage('Package') {
             steps {
-                sh 'mvn package'
+                bat 'mvn package'
             }
         }
 
         stage('Run App') {
             steps {
-                sh 'java -jar target/*.jar'
+                bat 'java -jar target/*.jar'
             }
         }
     }
