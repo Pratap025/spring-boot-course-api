@@ -32,7 +32,7 @@ pipeline {
 
         stage('Run App') {
             steps {
-                bat 'java -jar target/*.jar'
+                bat 'java -jar target/app.jar'
             }
         }
     }
