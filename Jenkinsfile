@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/Pratap025/spring-boot-course-api'
             }
         }
 
