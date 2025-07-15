@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import jakarta.validation.constraints.Email;
 
 @Entity
@@ -15,12 +13,12 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	
-	@NotBlank
-	@Size(min =3,max = 20)
+	
+	
     private String title;
-	@Size(min =3,max = 20)
+	
     private String description;
-	@Size(min =3,max = 20)
+
     private int duration;
 	
 	@Email
@@ -32,8 +30,8 @@ public class Course {
 				+ ", Email=" + Email + "]";
 	}
 
-	public Course(Long id, @NotBlank @Size(min = 3, max = 20) String title, @Size(min = 3, max = 20) String description,
-			@Size(min = 3, max = 20) int duration, @jakarta.validation.constraints.Email String email) {
+	public Course(Long id, String title,  String description,
+			 int duration, String email) {
 		super();
 		this.id = id;
 		this.title = title;
