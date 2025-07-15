@@ -28,8 +28,9 @@ public class CourseController {
 	    }
 	
 	  @GetMapping("/get")
-	public String getAll() {
-		return "we have tested";
+	public ResponseEntity getAllDetails() {
+		return new ResponseEntity<>(courImpl.getAll(), HttpStatus.OK);
+		
 		
 	}
 	  
